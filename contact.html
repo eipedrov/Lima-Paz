@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+		integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+		crossorigin="">
+		</script>
+
+	<title>Lima & Paz</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="no-sidebar is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<section id="header" class="wrapper">
+
+			<!-- Logo -->
+			<div id="logo">
+				<h1><a href="index.html">Lima & Paz</a></h1>
+				<p>Assessoria Contábil</p>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li class="current"><a href="index.html">Home</a></li>
+					<li>
+						<a href="#">Serviços</a>
+						<ul>
+							<li><a href="#">Contábeis</a></li>
+							<li><a href="#">Trabalistas</a></li>
+							<li><a href="#">fiscais</a></li>
+							<li>
+								<a href="#">Empresas</a>
+								<ul>
+									<li><a href="#">Abertura</a></li>
+									<li><a href="#">Reguralização</a></li>
+									<li><a href="#">Baixa</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Partidos</a></li>
+							<li>
+								<a href="#">Declarações</a>
+								<ul>
+									<li><a href="#">PF</a></li>
+									<li><a href="#">PJ</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Contratos</a></li>
+						</ul>
+					</li>
+					<li><a href="about.html">Sobre Nós</a></li>
+					<li><a href="contact.html">Contato</a></li>
+				</ul>
+			</nav>
+
+		</section>
+
+		<!-- Highlights -->
+		<section id="highlights" class="wrapper style3">
+			<div class="title">Contato</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-12-medium">
+						<!-- Contact Form -->
+						<section>
+							<div id="map" style = "height: 380px"></div>
+							<script>
+								// Creating map options
+								var mapOptions = {
+									center: [2.7956377784381545, -60.74598351006682],
+									zoom: 15
+								
+								}
+
+								// Creating a map object
+								var map = new L.map('map', mapOptions);
+
+								// Creating a Layer object
+								var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+								// Adding layer to the map
+								map.addLayer(layer);
+
+								var marker = L.marker([2.7956377784381545, -60.74598351006682]).addTo(map);
+							</script>
+						</section>
+					</div>
+					<div class="col-6 col-12-medium">
+						<!-- Contact -->
+						<section class="feature-list small">
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<section>
+										<h3 class="icon solid fa-home">Localização</h3>
+										<p>
+											Rua Genesio Alcimiro Lopes <br />
+											599 - Senador Hélio campos<br />
+											Boa Vista - RR, 69316-550
+										</p>
+									</section>
+								</div>
+								<div class="col-6 col-12-small">
+									<section>
+										<h3 class="icon solid fa-comment">Redes sociais</h3>
+										<p>
+											<a href="www.instagram.com/limaepazrr/">Instagram</a><br />
+											<a href="linkedin.com/MariaJoselma">LinkedIn</a><br />
+											<a href="facebook.com/limaepazrr">Facebook</a>
+										</p>
+									</section>
+								</div>
+								<div class="col-6 col-12-small">
+									<section>
+										<h3 class="icon solid fa-envelope">Email</h3>
+										<p>
+											<a href="limaepazrr@gmail.com">Lima&Paz</a>
+										</p>
+									</section>
+								</div>
+								<div class="col-6 col-12-small">
+									<section>
+										<h3 class="icon solid fa-phone">Whatsapp</h3>
+										<a>
+											https://wa.me/5595991213352
+										</a>
+									</section>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer" class="wrapper">
+			<div id="copyright">
+				<ul>
+					<li>Design: Pedro Vinícius.</li>
+					<li><a href="https://www.instagram.com/eipedrov/">Contato</a></li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+</body>
+
+</html>
